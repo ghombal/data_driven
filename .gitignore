@@ -1,0 +1,29 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Test output
+htmlcov/
+.coverage
+pytest_cache/
+*.log
+
+# IDE/editor configs
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+
+# Environment variables
+.env

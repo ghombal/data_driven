@@ -1,0 +1,11 @@
+pyproject.toml
+setup.py
+src/data_driven.egg-info/PKG-INFO
+src/data_driven.egg-info/SOURCES.txt
+src/data_driven.egg-info/dependency_links.txt
+src/data_driven.egg-info/requires.txt
+src/data_driven.egg-info/top_level.txt
+src/market_data_adapter/__init__.py
+src/market_data_adapter/example_run.py
+src/market_data_adapter/market_data_adapter.py
+src/market_data_adapter/models.py
