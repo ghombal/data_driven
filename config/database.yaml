@@ -1,0 +1,41 @@
+# config/database.yaml
+database:
+  development:
+    host: localhost
+    port: 5432
+    database: market_data_db
+    username: market_user
+    password: Prince%402  # Change this!
+    echo: false
+    pool_size: 20
+    max_overflow: 30
+    pool_timeout: 30
+    pool_recycle: 3600
+    
+timescale:
+  chunk_time_interval: '30 minutes'      # Optimized for 5-20 symbols
+  compression_after: '2 hours'           # Compress recent data
+  compression_policy: 'lz4'              # Fast compression
+  retention_policy: '7 days'             # 7 days for dev
+  
+symbols:
+  development: 
+    - 'AAPL'
+    - 'GOOGL' 
+    - 'MSFT'
+    - 'TSLA'
+    - 'AMZN'
+    - 'META'
+    - 'NVDA'
+    - 'NFLX'
+    - 'SPY'
+    - 'QQQ'
+  batch_size: 5000                       # Larger batches for 5-20 symbols
+  flush_interval: 2                      # Faster flush for more symbols
+  max_queue_size: 50000                  # Larger queue
+
+performance:
+  connection_pool_size: 25               # More connections for 5-20 symbols
+  statement_timeout: 30000               # 30 second timeout
+  query_timeout: 10000                   # 10 second query timeout
+  batch_insert_size: 1000               # Batch insert size
